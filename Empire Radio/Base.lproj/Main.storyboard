@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +15,112 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Empire_Radio" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ontheair" translatesAutoresizingMaskIntoConstraints="NO" id="BZ0-qf-BUp">
+                                <rect key="frame" x="40" y="153" width="294" height="237"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="237" id="IiZ-rY-46w"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="jOM-uf-gkp">
+                                <rect key="frame" x="43" y="568" width="289" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5mR-6q-94X"/>
+                                </constraints>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sA-2l-Y4x" userLabel="Play Button">
+                                <rect key="frame" x="150" y="440" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="VkM-0J-zAM"/>
+                                    <constraint firstAttribute="height" constant="75" id="z88-b4-Duv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nHS-H8-578"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rwe-wU-lNY" userLabel="Pause Button">
+                                <rect key="frame" x="150" y="440" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="75" id="3tP-8T-31T"/>
+                                    <constraint firstAttribute="width" constant="75" id="Gj9-cF-D4V"/>
+                                    <constraint firstAttribute="height" constant="75" id="j8o-BK-W4S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="25"/>
+                                <state key="normal" image="pause"/>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HSi-a2-ojG"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JUt-ew-TaZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="82"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Empire Radio Trans" translatesAutoresizingMaskIntoConstraints="NO" id="4M9-VP-xkB">
+                                        <rect key="frame" x="8" y="20" width="359" height="54"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="4M9-VP-xkB" firstAttribute="top" secondItem="JUt-ew-TaZ" secondAttribute="topMargin" constant="-8" id="FIG-R2-ISC"/>
+                                    <constraint firstItem="4M9-VP-xkB" firstAttribute="leading" secondItem="JUt-ew-TaZ" secondAttribute="leadingMargin" id="FPF-Mn-NCp"/>
+                                    <constraint firstItem="4M9-VP-xkB" firstAttribute="bottom" secondItem="JUt-ew-TaZ" secondAttribute="bottomMargin" id="d1i-rp-Mla"/>
+                                    <constraint firstItem="4M9-VP-xkB" firstAttribute="trailing" secondItem="JUt-ew-TaZ" secondAttribute="trailingMargin" id="zkO-4k-zOc"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="- Volume +" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XLs-bX-LoO">
+                                <rect key="frame" x="137" y="606" width="100" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Cvi-DJ-Jxa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1sA-2l-Y4x" firstAttribute="top" secondItem="rwe-wU-lNY" secondAttribute="top" id="7aC-QK-31Q"/>
+                            <constraint firstItem="JUt-ew-TaZ" firstAttribute="centerX" secondItem="BZ0-qf-BUp" secondAttribute="centerX" id="9eh-nc-InC"/>
+                            <constraint firstAttribute="trailing" secondItem="JUt-ew-TaZ" secondAttribute="trailing" id="IT6-92-qnu"/>
+                            <constraint firstItem="JUt-ew-TaZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KVs-ND-KgU"/>
+                            <constraint firstItem="rwe-wU-lNY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="150" id="Ke0-xE-JWG"/>
+                            <constraint firstItem="1sA-2l-Y4x" firstAttribute="baseline" secondItem="rwe-wU-lNY" secondAttribute="baseline" id="MZ5-IB-XqV"/>
+                            <constraint firstItem="BZ0-qf-BUp" firstAttribute="top" secondItem="JUt-ew-TaZ" secondAttribute="bottom" constant="71" id="Ndz-vY-Zxc"/>
+                            <constraint firstItem="rwe-wU-lNY" firstAttribute="top" secondItem="BZ0-qf-BUp" secondAttribute="bottom" constant="50" id="Ns8-pN-7Wx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XLs-bX-LoO" secondAttribute="bottom" constant="40" id="OcH-l1-DqE"/>
+                            <constraint firstItem="jOM-uf-gkp" firstAttribute="centerX" secondItem="XLs-bX-LoO" secondAttribute="centerX" constant="0.5" id="R27-ZG-qBz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1sA-2l-Y4x" secondAttribute="trailing" constant="150" id="UcP-H1-5hD"/>
+                            <constraint firstItem="JUt-ew-TaZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="VNM-IQ-9Qq"/>
+                            <constraint firstItem="rwe-wU-lNY" firstAttribute="trailing" secondItem="1sA-2l-Y4x" secondAttribute="trailing" id="dOx-5a-CIT"/>
+                            <constraint firstItem="jOM-uf-gkp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="29" id="ePh-R4-XY5"/>
+                            <constraint firstItem="1sA-2l-Y4x" firstAttribute="leading" secondItem="XLs-bX-LoO" secondAttribute="leading" constant="13" id="hyq-Wr-ZMH"/>
+                            <constraint firstItem="BZ0-qf-BUp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="u73-4Z-OrP"/>
+                            <constraint firstItem="1sA-2l-Y4x" firstAttribute="leading" secondItem="rwe-wU-lNY" secondAttribute="leading" id="ubl-mY-sYx"/>
+                            <constraint firstItem="1sA-2l-Y4x" firstAttribute="firstBaseline" secondItem="rwe-wU-lNY" secondAttribute="firstBaseline" id="ukm-v9-wNh"/>
+                            <constraint firstItem="jOM-uf-gkp" firstAttribute="top" secondItem="rwe-wU-lNY" secondAttribute="bottom" constant="53" id="wXt-Lw-6iZ"/>
+                            <constraint firstItem="XLs-bX-LoO" firstAttribute="top" secondItem="jOM-uf-gkp" secondAttribute="bottom" constant="8" symbolic="YES" id="zZN-hj-fLI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="rwe-wU-lNY" id="5Wp-DB-Cwj"/>
+                        <outlet property="playButton" destination="1sA-2l-Y4x" id="pwE-zR-ZpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Empire Radio Trans" width="587" height="366"/>
+        <image name="ontheair" width="83" height="122"/>
+        <image name="pause" width="170" height="170"/>
+        <image name="play" width="500" height="500"/>
+    </resources>
 </document>
