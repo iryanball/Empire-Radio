@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var pauseButton: UIButton!
+    @IBOutlet weak var volumeSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,9 +63,6 @@ class ViewController: UIViewController {
             pauseButton.isHidden = true
         }
         
-        
-        
-        
     }
     
     @IBAction func pauseButtonPressed(_ sender: Any) {
@@ -73,6 +71,12 @@ class ViewController: UIViewController {
         pauseButton.isHidden = true
         
         player!.pause()
+        
+    }
+    
+    @IBAction func volumeSliderMoved(_ sender: Any) {
+        
+        player?.volume = volumeSlider.value
         
     }
     
