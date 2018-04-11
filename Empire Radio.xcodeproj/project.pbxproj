@@ -13,6 +13,8 @@
 		1E2D5B1B206E8D2E0014373D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2D5B19206E8D2E0014373D /* Main.storyboard */; };
 		1E2D5B1D206E8D300014373D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1E2D5B1C206E8D300014373D /* Assets.xcassets */; };
 		1E2D5B20206E8D300014373D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1E2D5B1E206E8D300014373D /* LaunchScreen.storyboard */; };
+		1EA7E4C7207E70AD009CE356 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1EA7E4C6207E70AD009CE356 /* GoogleService-Info.plist */; };
+		7625F2C8A9C5801D3E018A90 /* Pods_Empire_Radio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC80F17B83B5117728BCE986 /* Pods_Empire_Radio.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,11 @@
 		1E2D5B1C206E8D300014373D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1E2D5B1F206E8D300014373D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1E2D5B21206E8D300014373D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1EA7E4C6207E70AD009CE356 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1EA7E4C8207E76E9009CE356 /* Empire Radio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Empire Radio.entitlements"; sourceTree = "<group>"; };
+		5C2AB7679877762D07C576BE /* Pods-Empire Radio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Empire Radio.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Empire Radio/Pods-Empire Radio.debug.xcconfig"; sourceTree = "<group>"; };
+		BC80F17B83B5117728BCE986 /* Pods_Empire_Radio.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Empire_Radio.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6AA86776D6076FB0618C1A5 /* Pods-Empire Radio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Empire Radio.release.xcconfig"; path = "Pods/Target Support Files/Pods-Empire Radio/Pods-Empire Radio.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7625F2C8A9C5801D3E018A90 /* Pods_Empire_Radio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,8 @@
 			children = (
 				1E2D5B14206E8D2E0014373D /* Empire Radio */,
 				1E2D5B13206E8D2E0014373D /* Products */,
+				4A4C9927DB5F496FFA0066F1 /* Pods */,
+				5ED30908B38B7C3066C807BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +66,7 @@
 		1E2D5B14206E8D2E0014373D /* Empire Radio */ = {
 			isa = PBXGroup;
 			children = (
+				1EA7E4C8207E76E9009CE356 /* Empire Radio.entitlements */,
 				1E2D5B15206E8D2E0014373D /* AppDelegate.swift */,
 				1E2D5B17206E8D2E0014373D /* ViewController.swift */,
 				1E1A0BA8206EEEC1001C9634 /* Reachability.swift */,
@@ -63,8 +74,26 @@
 				1E2D5B1C206E8D300014373D /* Assets.xcassets */,
 				1E2D5B1E206E8D300014373D /* LaunchScreen.storyboard */,
 				1E2D5B21206E8D300014373D /* Info.plist */,
+				1EA7E4C6207E70AD009CE356 /* GoogleService-Info.plist */,
 			);
 			path = "Empire Radio";
+			sourceTree = "<group>";
+		};
+		4A4C9927DB5F496FFA0066F1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C2AB7679877762D07C576BE /* Pods-Empire Radio.debug.xcconfig */,
+				E6AA86776D6076FB0618C1A5 /* Pods-Empire Radio.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		5ED30908B38B7C3066C807BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BC80F17B83B5117728BCE986 /* Pods_Empire_Radio.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +103,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1E2D5B24206E8D300014373D /* Build configuration list for PBXNativeTarget "Empire Radio" */;
 			buildPhases = (
+				0680E2979B36ACB77F702C0D /* [CP] Check Pods Manifest.lock */,
 				1E2D5B0E206E8D2E0014373D /* Sources */,
 				1E2D5B0F206E8D2E0014373D /* Frameworks */,
 				1E2D5B10206E8D2E0014373D /* Resources */,
+				CFF95CE77453A2DEAFFD74E9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -99,6 +130,11 @@
 				TargetAttributes = {
 					1E2D5B11206E8D2E0014373D = {
 						CreatedOnToolsVersion = 9.3;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -126,12 +162,56 @@
 			buildActionMask = 2147483647;
 			files = (
 				1E2D5B20206E8D300014373D /* LaunchScreen.storyboard in Resources */,
+				1EA7E4C7207E70AD009CE356 /* GoogleService-Info.plist in Resources */,
 				1E2D5B1D206E8D300014373D /* Assets.xcassets in Resources */,
 				1E2D5B1B206E8D2E0014373D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0680E2979B36ACB77F702C0D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Empire Radio-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CFF95CE77453A2DEAFFD74E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Empire Radio/Pods-Empire Radio-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Empire Radio/Pods-Empire Radio-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E2D5B0E206E8D2E0014373D /* Sources */ = {
@@ -282,11 +362,14 @@
 		};
 		1E2D5B25206E8D300014373D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C2AB7679877762D07C576BE /* Pods-Empire Radio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Empire Radio/Empire Radio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GT4MJG4L6;
 				INFOPLIST_FILE = "Empire Radio/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,11 +383,14 @@
 		};
 		1E2D5B26206E8D300014373D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6AA86776D6076FB0618C1A5 /* Pods-Empire Radio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Empire Radio/Empire Radio.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8GT4MJG4L6;
 				INFOPLIST_FILE = "Empire Radio/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
